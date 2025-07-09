@@ -1,1 +1,8 @@
-
+streamlit
+langchain
+pypdf2
+faiss-cpu
+sentence-transformers
+transformers
+torch
+python-dotenv
