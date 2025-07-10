@@ -69,15 +69,15 @@ Answer:
     prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
 
     pipe = pipeline(
-        "text2text-generation",
-        model="google/flan-t5-xl",  # You can replace with flan-t5-base for faster performance
-        max_new_tokens=1024,
-        temperature=0.3,
-        repetition_penalty=1.1,
-        do_sample=True,
-        top_k=50,
-        top_p=0.95
-    )
+    "text2text-generation",
+    model="google/flan-t5-base",
+    max_new_tokens=2048,
+    temperature=0.3,
+    repetition_penalty=1.1,
+    do_sample=True,
+    top_k=50,
+    top_p=0.95,
+)
 
     llm = HFTransformerLLM(model_pipeline=pipe)
     return load_qa_chain(llm=llm, chain_type="stuff", prompt=prompt)
