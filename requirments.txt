@@ -1,8 +1,7 @@
 streamlit
 langchain
-pypdf2
+PyPDF2
 faiss-cpu
 sentence-transformers
-transformers
-torch
 python-dotenv
+transformers
